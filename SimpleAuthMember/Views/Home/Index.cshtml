@@ -1,19 +1,8 @@
 ﻿@{
-    Layout = null;
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
-<body>
-    <div>
         Welcome @WebSecurity.CurrentUserName
-        <br/>
+        <br />
         @Html.ActionLink("Logout", "Logout", "Account")
-    </div>
-</body>
-</html>

@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title - CAAMVC4</title>
+    <link rel="stylesheet"
+          href="@Url.Content("~/Content/Site.css")" />
+    <script src="@Url.Content("~/Scripts/jquery-1.8.2.js")"></script>
+</head>
+<body>
+    <div>
+        <ul id="menu">
+            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+            <li>@Html.ActionLink("Admin", "Index", "Admin")</li>
+            <li>@Html.ActionLink("Register", "Register", "Account")</li>
+            <li>@Html.ActionLink("Login", "Login", "Account")</li>
+            <li>@Html.ActionLink("Logout", "Logout", "Account")</li>
+        </ul>
+        <section id="main">
+            @RenderBody()
+            <br/>
+            <p>Copyright Angel Garcia, 2014. All Rights Reserved.</p>
+        </section>
+    </div>
+</body>
+</html>

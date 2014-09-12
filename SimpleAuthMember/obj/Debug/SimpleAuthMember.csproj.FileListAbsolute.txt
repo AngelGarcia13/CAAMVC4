@@ -30,3 +30,35 @@ c:\users\argarcia\documents\visual studio 2013\Projects\SimpleAuthMember\SimpleA
 c:\users\argarcia\documents\visual studio 2013\Projects\SimpleAuthMember\SimpleAuthMember\bin\WebMatrix.WebData.dll
 c:\users\argarcia\documents\visual studio 2013\Projects\SimpleAuthMember\SimpleAuthMember\bin\WebMatrix.Data.xml
 c:\users\argarcia\documents\visual studio 2013\Projects\SimpleAuthMember\SimpleAuthMember\bin\WebMatrix.WebData.xml
+C:\Users\Argarcia\Documents\GitHub\CAAMVC4\SimpleAuthMember\bin\SimpleAuthMember.dll.config
+C:\Users\Argarcia\Documents\GitHub\CAAMVC4\SimpleAuthMember\bin\SimpleAuthMember.dll
+C:\Users\Argarcia\Documents\GitHub\CAAMVC4\SimpleAuthMember\bin\SimpleAuthMember.pdb
+C:\Users\Argarcia\Documents\GitHub\CAAMVC4\SimpleAuthMember\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Argarcia\Documents\GitHub\CAAMVC4\SimpleAuthMember\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\Argarcia\Documents\GitHub\CAAMVC4\SimpleAuthMember\bin\Newtonsoft.Json.dll
+C:\Users\Argarcia\Documents\GitHub\CAAMVC4\SimpleAuthMember\bin\System.Net.Http.Formatting.dll
+C:\Users\Argarcia\Documents\GitHub\CAAMVC4\SimpleAuthMember\bin\System.Web.Helpers.dll
+C:\Users\Argarcia\Documents\GitHub\CAAMVC4\SimpleAuthMember\bin\System.Web.Http.dll
+C:\Users\Argarcia\Documents\GitHub\CAAMVC4\SimpleAuthMember\bin\System.Web.Http.WebHost.dll
+C:\Users\Argarcia\Documents\GitHub\CAAMVC4\SimpleAuthMember\bin\System.Web.Mvc.dll
+C:\Users\Argarcia\Documents\GitHub\CAAMVC4\SimpleAuthMember\bin\System.Web.Razor.dll
+C:\Users\Argarcia\Documents\GitHub\CAAMVC4\SimpleAuthMember\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Argarcia\Documents\GitHub\CAAMVC4\SimpleAuthMember\bin\System.Web.WebPages.dll
+C:\Users\Argarcia\Documents\GitHub\CAAMVC4\SimpleAuthMember\bin\System.Web.WebPages.Razor.dll
+C:\Users\Argarcia\Documents\GitHub\CAAMVC4\SimpleAuthMember\bin\WebMatrix.Data.dll
+C:\Users\Argarcia\Documents\GitHub\CAAMVC4\SimpleAuthMember\bin\WebMatrix.WebData.dll
+C:\Users\Argarcia\Documents\GitHub\CAAMVC4\SimpleAuthMember\bin\Newtonsoft.Json.xml
+C:\Users\Argarcia\Documents\GitHub\CAAMVC4\SimpleAuthMember\bin\System.Net.Http.Formatting.xml
+C:\Users\Argarcia\Documents\GitHub\CAAMVC4\SimpleAuthMember\bin\System.Web.Helpers.xml
+C:\Users\Argarcia\Documents\GitHub\CAAMVC4\SimpleAuthMember\bin\System.Web.Http.xml
+C:\Users\Argarcia\Documents\GitHub\CAAMVC4\SimpleAuthMember\bin\System.Web.Http.WebHost.xml
+C:\Users\Argarcia\Documents\GitHub\CAAMVC4\SimpleAuthMember\bin\System.Web.Mvc.xml
+C:\Users\Argarcia\Documents\GitHub\CAAMVC4\SimpleAuthMember\bin\System.Web.Razor.xml
+C:\Users\Argarcia\Documents\GitHub\CAAMVC4\SimpleAuthMember\bin\System.Web.WebPages.xml
+C:\Users\Argarcia\Documents\GitHub\CAAMVC4\SimpleAuthMember\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Argarcia\Documents\GitHub\CAAMVC4\SimpleAuthMember\bin\System.Web.WebPages.Razor.xml
+C:\Users\Argarcia\Documents\GitHub\CAAMVC4\SimpleAuthMember\bin\WebMatrix.Data.xml
+C:\Users\Argarcia\Documents\GitHub\CAAMVC4\SimpleAuthMember\bin\WebMatrix.WebData.xml
+C:\Users\Argarcia\Documents\GitHub\CAAMVC4\SimpleAuthMember\obj\Debug\SimpleAuthMember.csprojResolveAssemblyReference.cache
+C:\Users\Argarcia\Documents\GitHub\CAAMVC4\SimpleAuthMember\obj\Debug\SimpleAuthMember.dll
+C:\Users\Argarcia\Documents\GitHub\CAAMVC4\SimpleAuthMember\obj\Debug\SimpleAuthMember.pdb

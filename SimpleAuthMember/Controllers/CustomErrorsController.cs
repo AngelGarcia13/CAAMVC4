@@ -11,19 +11,24 @@ namespace SimpleAuthMember.Controllers
     {
         public ActionResult Index()
         {
+            Response.StatusCode = 400;
             return View();
         }
 
         public ActionResult NotFound()
         {
+            Response.StatusCode = 404;
             return View();
-            //return new HttpStatusCodeResult(HttpStatusCode.NotFound, "Page Not Found");
+            
         }
 
         public ActionResult AccessDenied()
         {
+            Response.SuppressFormsAuthenticationRedirect = true;
+            Response.StatusCode = 401;
+            
             return View();
-            //return new HttpStatusCodeResult(HttpStatusCode.Unauthorized, "Access Denied");
+            
         }
 
     }
