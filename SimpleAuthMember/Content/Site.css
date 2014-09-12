@@ -2,16 +2,21 @@
     background-color: #E7E7E7;
     padding-top: 70px;
 }
-
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
-   
+    position: relative;
+    min-height: 100%;
 }
 
 body {
     /* Margin bottom by footer height */
     margin-bottom: 60px;
+}
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
 }
 
 .footer {
