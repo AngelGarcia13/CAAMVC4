@@ -1,0 +1,30 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm("Login", "Account", FormMethod.Post))
+        {
+            <div>
+                <fieldset>
+                    <legend>Login</legend>
+                    User:
+                    <input type="text" name="username" />
+                    Password :
+                    <input type="password" name="password" />
+
+                    <input type="submit" value="Login" />
+                </fieldset>
+            </div>
+        }
+    </div>
+</body>
+</html>
