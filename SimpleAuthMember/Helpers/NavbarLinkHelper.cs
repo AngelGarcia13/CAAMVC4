@@ -1,9 +1,11 @@
-﻿using System;
+﻿using SimpleAuthMember.Custom;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Web;
 using System.Web.Mvc;
+using WebMatrix.WebData;
 
 namespace SimpleAuthMember.Helpers
 {
@@ -11,6 +13,20 @@ namespace SimpleAuthMember.Helpers
     {
         public static MvcHtmlString NavbarLink(this HtmlHelper helper, string name, string actionName, string controllerName)
         {
+            var sb = new StringBuilder();
+            var routeElement = new RouteElement { Action = actionName, Controller = controllerName};
+            var currentUserRoles = new string[]{ "unregister" };
+            if (WebSecurity.IsAuthenticated) {
+                var userRolesProvider = (SimpleRoleProvider)System.Web.Security.Roles.Provider;
+                var userName = WebSecurity.CurrentUserName;
+                currentUserRoles = userRolesProvider.GetRolesForUser(userName);
+            }
+            
+            if (!SecurityStuffs.HasPermmisions(currentUserRoles, routeElement))
+            {
+                return new MvcHtmlString(sb.ToString());
+            }
+
             string currentControllerName = (string)helper.ViewContext.RouteData.Values["controller"];
             string currentActionName = (string)helper.ViewContext.RouteData.Values["action"];
             
@@ -19,11 +35,11 @@ namespace SimpleAuthMember.Helpers
                 isActiveClass = " class=\"active\"";
             }
 
-            var sb = new StringBuilder();
             sb.AppendFormat("<li {0}>", isActiveClass);
             var url = new UrlHelper(HttpContext.Current.Request.RequestContext);
             sb.AppendFormat("<a href=\"{0}\">{1}</a>", url.Action(actionName, controllerName), name);
             sb.Append("</li>");
+            
             return new MvcHtmlString(sb.ToString());
 }
     }
