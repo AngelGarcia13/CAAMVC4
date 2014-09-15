@@ -32,7 +32,7 @@ namespace SimpleAuthMember.Custom
         public static List<RouteElement> UnregisterList()
         {
             var list = new List<RouteElement> { 
-            new RouteElement{Action="Index",Controller="Home"},
+            //new RouteElement{Action="Index",Controller="Home"},
             new RouteElement{Action="Register",Controller="Account"},
             new RouteElement{Action="Login",Controller="Account"}
             };
