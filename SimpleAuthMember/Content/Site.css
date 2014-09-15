@@ -1,6 +1,13 @@
 ﻿body {
-    background-color: #E7E7E7;
+    text-align:center;
+   
     padding-top: 70px;
+}
+.back-white {
+    background-color: #FFFFFF;
+}
+.centered{
+    margin: 0 auto;
 }
 /* Sticky footer styles
 -------------------------------------------------- */
@@ -14,7 +21,7 @@ body {
     margin-bottom: 60px;
 }
 
-.col-centered{
+.col-centered {
     float: none;
     margin: 0 auto;
 }
