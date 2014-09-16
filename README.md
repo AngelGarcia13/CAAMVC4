@@ -11,3 +11,4 @@ EF and WebSecurity simple implementation.
 - Roles
 - Routes Permmissions (with a Helper to show or not HTML elements depends on the user role)
 - Authorize by Role with AuthorizeAttribute implementation
+- Responsive Design (Bootstrap).
