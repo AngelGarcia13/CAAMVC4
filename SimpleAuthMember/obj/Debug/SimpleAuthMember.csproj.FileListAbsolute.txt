@@ -62,3 +62,7 @@ C:\Users\Argarcia\Documents\GitHub\CAAMVC4\SimpleAuthMember\bin\WebMatrix.WebDat
 C:\Users\Argarcia\Documents\GitHub\CAAMVC4\SimpleAuthMember\obj\Debug\SimpleAuthMember.csprojResolveAssemblyReference.cache
 C:\Users\Argarcia\Documents\GitHub\CAAMVC4\SimpleAuthMember\obj\Debug\SimpleAuthMember.dll
 C:\Users\Argarcia\Documents\GitHub\CAAMVC4\SimpleAuthMember\obj\Debug\SimpleAuthMember.pdb
+C:\Users\Argarcia\Documents\GitHub\CAAMVC4\SimpleAuthMember\bin\EntityFramework.dll
+C:\Users\Argarcia\Documents\GitHub\CAAMVC4\SimpleAuthMember\bin\EntityFramework.SqlServer.dll
+C:\Users\Argarcia\Documents\GitHub\CAAMVC4\SimpleAuthMember\bin\EntityFramework.xml
+C:\Users\Argarcia\Documents\GitHub\CAAMVC4\SimpleAuthMember\bin\EntityFramework.SqlServer.xml

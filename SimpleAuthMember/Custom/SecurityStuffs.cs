@@ -1,67 +1,61 @@
-﻿using System;
+﻿using SimpleAuthMember.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
 namespace SimpleAuthMember.Custom
 {
-    public static class SecurityStuffs
+    //Singleton Pattern
+    public class SecurityStuffs
     {
-        //private static Dictionary<string, List<object>> d = new Dictionary<string, List<object>>();
-        public static List<RouteElement> AdminList()
+        
+        private static SecurityStuffs instance = null;
+
+        private SecurityStuffs()
         {
-            var list = new List<RouteElement> { 
-            new RouteElement{Action="",Controller=""},
-            new RouteElement{Action="",Controller=""},
-            new RouteElement{Action="",Controller=""},
-            new RouteElement{Action="",Controller=""}
-            };
-            return list;
-        }
-        public static List<RouteElement> UserList()
-        {
-            var list = new List<RouteElement> { 
-            new RouteElement{Action="",Controller=""},
-            new RouteElement{Action="",Controller=""},
-            new RouteElement{Action="",Controller=""},
-            new RouteElement{Action="",Controller=""}
-            };
-            return list;
+
         }
 
-        public static List<RouteElement> UnregisterList()
+        public static SecurityStuffs GetInstance()
         {
-            var list = new List<RouteElement> { 
-            //new RouteElement{Action="Index",Controller="Home"},
-            new RouteElement{Action="Register",Controller="Account"},
-            new RouteElement{Action="Login",Controller="Account"}
-            };
-            return list;
+            if (instance == null)
+                instance = new SecurityStuffs();
+
+            return instance;
         }
-        public static Dictionary<string, List<RouteElement>> GetDictionary()
+
+        public static List<RouteElement> RoutesListByRole(string role)
         {
-            var d = new Dictionary<string, List<RouteElement>>();
-            d.Add("unregister", UnregisterList());
-            d.Add("admin", AdminList());
-            d.Add("user", UserList());
-            return d;
-        }
-        public static bool HasPermmisions(string[] roles, RouteElement route){
-            var d = GetDictionary();
-            bool isRoleAuthorized = false;
-            foreach(string role in roles){
-                if (d.ContainsKey(role))
+            var list = new List<RouteElement>();
+            using (var db = new DataModel())
+            {
+                var queryRoutes = db.webpages_Roles.Where(x => x.RoleName.Equals(role, StringComparison.InvariantCultureIgnoreCase)).SelectMany(x => x.routes).ToList();
+                foreach (var item in queryRoutes)
                 {
-                    var views = d[role];
-
-                    if (views.Exists(x=> x.Action == route.Action && x.Controller == route.Controller)) {
-                        isRoleAuthorized =  true;
-                        break;
-                    }
+                    list.Add(new RouteElement { Action = item.Action, Controller = item.Controller });
                 }
             }
+            return list;
+        }
+
+
+        public bool HasPermmisions(string[] roles, RouteElement route)
+        {
+            bool isRoleAuthorized = false;
+            foreach (string role in roles)
+            {
+                var views = RoutesListByRole(role);
+
+                if (views.Exists(x => x.Action == route.Action && x.Controller == route.Controller))
+                {
+                    isRoleAuthorized = true;
+                    break;
+                }
+            }
+
             return isRoleAuthorized;
- 
+
         }
     }
 }

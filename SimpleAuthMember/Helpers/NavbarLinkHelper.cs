@@ -14,24 +14,26 @@ namespace SimpleAuthMember.Helpers
         public static MvcHtmlString NavbarLink(this HtmlHelper helper, string name, string actionName, string controllerName)
         {
             var sb = new StringBuilder();
-            var routeElement = new RouteElement { Action = actionName, Controller = controllerName};
-            var currentUserRoles = new string[]{ "unregister" };
-            if (WebSecurity.IsAuthenticated) {
+            var routeElement = new RouteElement { Action = actionName, Controller = controllerName };
+            var currentUserRoles = new string[] { "Unregister" };
+            if (WebSecurity.IsAuthenticated)
+            {
                 var userRolesProvider = (SimpleRoleProvider)System.Web.Security.Roles.Provider;
                 var userName = WebSecurity.CurrentUserName;
                 currentUserRoles = userRolesProvider.GetRolesForUser(userName);
             }
-            
-            if (!SecurityStuffs.HasPermmisions(currentUserRoles, routeElement))
+
+            if (!SecurityStuffs.GetInstance().HasPermmisions(currentUserRoles, routeElement))
             {
                 return new MvcHtmlString(sb.ToString());
             }
 
             string currentControllerName = (string)helper.ViewContext.RouteData.Values["controller"];
             string currentActionName = (string)helper.ViewContext.RouteData.Values["action"];
-            
+
             string isActiveClass = "";
-            if(currentControllerName.Equals(controllerName, StringComparison.CurrentCultureIgnoreCase) && currentActionName.Equals(actionName, StringComparison.CurrentCultureIgnoreCase)){
+            if (currentControllerName.Equals(controllerName, StringComparison.CurrentCultureIgnoreCase) && currentActionName.Equals(actionName, StringComparison.CurrentCultureIgnoreCase))
+            {
                 isActiveClass = " class=\"active\"";
             }
 
@@ -39,8 +41,8 @@ namespace SimpleAuthMember.Helpers
             var url = new UrlHelper(HttpContext.Current.Request.RequestContext);
             sb.AppendFormat("<a href=\"{0}\">{1}</a>", url.Action(actionName, controllerName), name);
             sb.Append("</li>");
-            
+
             return new MvcHtmlString(sb.ToString());
-}
+        }
     }
 }
