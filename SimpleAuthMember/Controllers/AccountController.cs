@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 using WebMatrix.WebData;
 
 namespace SimpleAuthMember.Controllers
@@ -19,9 +20,19 @@ namespace SimpleAuthMember.Controllers
         [HttpPost]
         public ActionResult Register(FormCollection form)
         {
-            WebSecurity.CreateUserAndAccount(form["username"], form["password"], new { DisplayName = form["displayname"], Country = form["country"] }, false);
-            Response.Redirect("~/account/login");
-            return View();
+            //...
+            try
+            {
+                WebSecurity.CreateUserAndAccount(form["username"], form["password"], new { DisplayName = form["displayname"], Country = form["country"] }, false);
+                Roles.AddUserToRoles(form["username"], new[] { "User" });
+                Response.Redirect("~/account/login");
+                return View();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+           
         }
         [AllowAnonymous]
         [HttpGet]

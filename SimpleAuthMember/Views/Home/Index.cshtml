@@ -3,6 +3,8 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-        Welcome @WebSecurity.CurrentUserName
+        Welcome <b>@ViewBag.displayName.DisplayName</b>
+        <br>
+        ( @WebSecurity.CurrentUserName )
         <br />
         @Html.ActionLink("Logout", "Logout", "Account")

@@ -127,6 +127,7 @@
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\CustomErrorsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Custom\RouteElement.cs" />
     <Compile Include="Custom\SecurityStuffs.cs" />
     <Compile Include="Filters\AuthorizeAttribute.cs" />
